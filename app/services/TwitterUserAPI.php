@@ -18,7 +18,6 @@ class TwitterUserAPI implements TwitterUserDataSource {
     {
         $numOfTweets = (Config::get('services.twitter.num_tweets')) ? Config::get('services.twitter.num_tweets') : 5;
         $user = new TwitterUser();
-        $ret = false;
 
         $user->setUsername($username);
 
@@ -28,21 +27,20 @@ class TwitterUserAPI implements TwitterUserDataSource {
             'format' => 'array'
         ));
 
-        if (count($response)) {
+        if (!isset($response['errors'])) {
 
             foreach ($response as $tweetData) {
                 $user->addTweet($tweetData['text']);
                 if (!isset($userArr)) $userArr = $tweetData['user'];
             }
 
-            $ret = $user
-                ->setNumberOfTweets($userArr['statuses_count'])
-                ->setNumberOfFollowers($userArr['followers_count'])
-                ->setNumberUserIsFollowing($userArr['friends_count']);
+            $user->setNumberOfTweets($userArr['statuses_count'])
+                 ->setNumberOfFollowers($userArr['followers_count'])
+                 ->setNumberUserIsFollowing($userArr['friends_count']);
 
         }
 
-        return $ret;
+        return $user;
     }
 
 }

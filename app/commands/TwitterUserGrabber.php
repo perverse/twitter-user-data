@@ -40,8 +40,15 @@ class TwitterUserGrabber extends Command {
     {
         $grabber = App::make('App\Services\Contracts\TwitterUserDataSource');
         $user = $grabber->getUser($this->argument('username'));
+        $user = $user->getJsonArray();
 
-        echo json_encode($user->getJsonArray(), JSON_PRETTY_PRINT) . "\n";
+        if (count($user) < 2) {
+            $data = array('success' => false, 'data' => 'No data found for user');
+        } else {
+            $data = array('success' => true, 'data' => $user);
+        }
+
+        echo json_encode($data, JSON_PRETTY_PRINT) . "\n";
     }
 
     /**

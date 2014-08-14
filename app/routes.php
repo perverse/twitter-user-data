@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'App\Controllers\TwitterController@show_index');
+Route::get('twitter', 'App\Controllers\TwitterController@api');

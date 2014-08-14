@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"thujohn/twitter": "dev-master",
-		"fabpot/goutte": "~2.0"
+		"fabpot/goutte": "~2.0",
+		"graham-campbell/markdown": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

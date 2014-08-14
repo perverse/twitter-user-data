@@ -122,7 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Thujohn\Twitter\TwitterServiceProvider',
-		'App\Services\TwitterServiceProvider'
+		'App\Services\TwitterServiceProvider',
+		'GrahamCampbell\Markdown\MarkdownServiceProvider'
 
 	),
 
@@ -190,6 +191,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Markdown' => 'GrahamCampbell\Markdown\Facades\Markdown'
 
 	),
 
