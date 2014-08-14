@@ -23,6 +23,16 @@ I have provided 2 interfaces which can both meet all of the criteria above.
 4. Ensure /app/storage is writable by the current user and by your web server
 3. Done!
 
+### Configuration
+
+This application has 2 ways of seeking Twitter User Data:
+1. Via the Twitter REST API 1.1
+2. Via a built-in page scraper
+
+The app will default to the page scraping method until a Twitter Application's OAuth details are entered into the services config file, which can be found at:
+> /app/config/services.php
+Once these configuration options are filled in, the app will utilize the faster, more reliable RESTful API.
+
 ### CLI Interface
 
 To begin using the CLI interface, go to your installations root directory and type "/path/to/your/php artisan twitter:grabuser username" and follow the instructions.
