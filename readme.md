@@ -31,6 +31,7 @@ This application has 2 ways of seeking Twitter User Data:
 
 The app will default to the page scraping method until a Twitter Application's OAuth details are entered into the services config file, which can be found at:
 > /app/config/services.php
+
 Once these configuration options are filled in, the app will utilize the faster, more reliable RESTful API.
 
 ### CLI Interface
