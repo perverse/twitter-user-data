@@ -26,6 +26,7 @@ I have provided 2 interfaces which can both meet all of the criteria above.
 ### Configuration
 
 This application has 2 ways of seeking Twitter User Data:
+
 1. Via the Twitter REST API 1.1
 2. Via a built-in page scraper
 
