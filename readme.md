@@ -37,7 +37,7 @@ Once these configuration options are filled in, the app will utilize the faster,
 
 ### CLI Interface
 
-To begin using the CLI interface, go to your installations root directory and type "/path/to/your/php artisan twitter:grabuser username" and follow the instructions.
+To begin using the CLI interface, go to your installations root directory and type "/path/to/your/php artisan twitter:grabuser username".
 
 ### HTTP Interface
 
