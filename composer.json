@@ -4,11 +4,14 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"thujohn/twitter": "dev-master",
+		"fabpot/goutte": "~2.0"
 	},
 	"autoload": {
 		"classmap": [
 			"app/commands",
+			"app/services",
 			"app/controllers",
 			"app/models",
 			"app/database/migrations",
